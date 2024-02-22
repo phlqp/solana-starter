@@ -41,7 +41,7 @@ pub struct Initialize<'info> {
         associated_token::mint = mint,
         associated_token::authority = pool,
     )]
-    pub program_token_account: Account<'info, TokenAccount>,
+    pub pool_token_account: Account<'info, TokenAccount>,
     pub system_program: Program<'info, System>,
     pub token_program: Program<'info, Token>,
     pub associated_token_program: Program<'info, AssociatedToken>,

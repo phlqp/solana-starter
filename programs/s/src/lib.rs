@@ -5,7 +5,7 @@ pub mod instructions;
 use anchor_lang::prelude::*;
 use crate::instructions::*;
 
-declare_id!("4cfnzBx8GxZXCJ3P1o62YrMnBMfT5EcVBvGqgo7fFLkc");
+declare_id!("Hd7gz8uBJy8LYQMhDFrKpemVVJtNYzRMi4qg8fWbrezD");
 
 #[program]
 pub mod s {
