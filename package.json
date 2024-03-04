@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "build": "anchor build --arch sbf",
+        "build": "anchor build",
         "reset": "rm -rf target",
         "deploy": "anchor deploy",
         "test": "anchor test",

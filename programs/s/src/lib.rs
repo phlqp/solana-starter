@@ -23,6 +23,17 @@ pub mod s {
     ) -> Result<()> {
         handler_create_profile(ctx)
     }
+
+    pub fn add(
+        ctx: Context<Add>
+    ) -> Result<()> {
+        handler_add(
+            ctx,
+            1000, // base_lot_size: 1000, // This is a safe number for most markets
+            1, // quote_lot_size
+            1, // quote_dust_threshold
+        )
+    }
 /*
     pub fn deposit(
         ctx: Context<Deposit>,

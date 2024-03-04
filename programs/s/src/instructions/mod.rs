@@ -6,3 +6,5 @@ pub mod claim;
 pub use claim::*;
 pub mod create_profile;
 pub use create_profile::*;
+pub mod add;
+pub use add::*;
