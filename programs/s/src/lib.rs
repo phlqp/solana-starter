@@ -24,27 +24,30 @@ pub mod s {
         handler_create_profile(ctx)
     }
 
-    pub fn add(
-        ctx: Context<Add>
+    pub fn create_market(
+        ctx: Context<CreateMarket>
     ) -> Result<()> {
-        handler_add(
+        handler_create_market(
             ctx,
             1000, // base_lot_size: 1000, // This is a safe number for most markets
             1, // quote_lot_size
             1, // quote_dust_threshold
         )
     }
-/*
-    pub fn deposit(
-        ctx: Context<Deposit>,
-        sol_amount: u64
-    ) -> Result<()> {
-        handler_deposit(ctx, sol_amount)
-    }
 
-    pub fn claim(
-        ctx: Context<Claim>,
+    pub fn add_liquidity(
+        ctx: Context<AddLiquidity>,
+        nonce: u8,
+        open_time: u64,
+        init_pc_amount: u64,
+        init_coin_amount: u64
     ) -> Result<()> {
-        handler_claim(ctx)
-    } */
+        handler_add_liquidity(
+            ctx,
+            nonce,
+            open_time,
+            init_pc_amount,
+            init_coin_amount
+        )
+    }
 }

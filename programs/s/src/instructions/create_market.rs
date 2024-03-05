@@ -1,9 +1,9 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{Mint, Token, TokenAccount};
-use crate::{id, state::{Pool, Profile}, utils::transfer_sol};
+use crate::id;
 
-pub fn handler_add(
-    ctx: Context<Add>,
+pub fn handler_create_market(
+    ctx: Context<CreateMarket>,
     coin_lot_size: u64,
     pc_lot_size: u64,
     pc_dust_threshold: u64
@@ -51,7 +51,7 @@ pub fn handler_add(
 }
 
 #[derive(Accounts)]
-pub struct Add<'info> {
+pub struct CreateMarket<'info> {
     #[account(mut)]
     pub user: Signer<'info>,
     #[account(mut)]
